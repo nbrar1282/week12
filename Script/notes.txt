@@ -1,0 +1,6 @@
+if you want to remove it afteer one click use remove listener in the
+function itself.
+
+can also use once in it as a object to only use it once .
+
+use html location for img location in javascript.
