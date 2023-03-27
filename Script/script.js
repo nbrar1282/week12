@@ -50,7 +50,10 @@
 const buttonContainer = document.querySelector(".button-container")
 function bgChange(event){
     console.log("buttons-clicked", event.target);
-    event.target.style.backgroundColor = 'green'
+    if (event.target.tagName === "BUTTON") {
+        event.target.backgroundColor = 'green'
+
+    }
 }
 
 buttonContainer.addEventListener("mouseover", bgChange)
