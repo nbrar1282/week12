@@ -56,5 +56,9 @@ function bgChange(event){
     };
 }
 
-buttonContainer.addEventListener("mouseover", bgChange)
+function changetetxt(event){
+    event.target.style.color = event.target.textContent
+}
 
+buttonContainer.addEventListener("mouseover", bgChange)
+buttonContainer.addEventListener("click", changetetxt)
