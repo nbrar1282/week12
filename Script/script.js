@@ -1,4 +1,26 @@
-// const buttonref = document.querySelector("button")
+const buttonref = document.querySelector("button")
+
+
+function addNewButtonAndPPara() {
+  const newbutton = document.createElement("button");
+  newbutton.addEventListener("mouseover", changeColor);
+  const para = document.createElement("p");
+  document.body.appendChild(newbutton);
+  document.body.appendChild(para);
+  newbutton.textContent = "purple";
+  para.textContent = "this is a new para";
+}
+
+function changeColor(event) {
+  event.target.style.backgroundColor = "green";
+}
+
+buttonref.addEventListener("click", addNewButtonAndPPara);
+
+
+
+
+
 // function alertuser(){
 //     alert("You clicked it!!!!!!");
     // buttonref.removeEventListener("click", alertuser);
@@ -7,12 +29,12 @@
 // buttonref.addEventListener("click", alertuser, {once:true});
 
 // function changeColor(){
-//   let body = document.querySelector("body")
-//   body.style.backgroundColor = "pink"
+// //   let body = document.querySelector("body")
+//   newbutton.style.backgroundColor = "green"
 
-// }
 
-// buttonref.addEventListener("click", changeColor)
+
+buttonref.addEventListener("click", changeColor)
 
 
 // let isClicked = false;
@@ -56,5 +78,9 @@ function bgChange(event){
     };
 }
 
-buttonContainer.addEventListener("mouseover", bgChange)
+function changetetxt(event){
+    event.target.style.color = event.target.textContent
+}
 
+buttonContainer.addEventListener("mouseover", bgChange)
+buttonContainer.addEventListener("click", changetetxt)
